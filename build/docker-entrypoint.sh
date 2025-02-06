@@ -1,6 +1,6 @@
 #!/bin/bash
-while ! mysql -u ${USER} -p${PASS} -h ${HOST}  -e ";" ; do
+while ! mysql -u ${DB_USER} -p${DB_PASS} -h ${DB_HOST}  -e ";" ; do
 	sleep 1
 done	
-mysql -u ${USER} -p${PASS} -h ${HOST} ${DB} < /opt/biblioteca.sql
+mysql -u ${DB_USER} -p${DB_PASS} -h ${DB_HOST} ${DB} < /opt/biblioteca.sql
 apache2ctl -D FOREGROUND

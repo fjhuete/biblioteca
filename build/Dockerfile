@@ -8,9 +8,9 @@ RUN chmod +x /usr/local/bin/docker-entrypoint.sh \
 COPY app /var/www/html/
 EXPOSE 80
 ENV BASE_URL=http://localhost/biblio/
-ENV HOST=localhost
-ENV USER=usuario
-ENV PASS=asdasd
+ENV DB_HOST=localhost
+ENV DB_USER=usuario
+ENV DB_PASS=asdasd
 ENV DB=biblioteca
 ENV CHARSET="charset=utf8"
 COPY app/biblioteca.sql /opt

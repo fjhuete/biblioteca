@@ -5,9 +5,9 @@ services:
     restart: always
     environment:
       BASE_URL: ${BASE_URL}
-      HOST: ${HOST}
-      USER: ${USER}
-      PASS: ${PASS}
+      DB_HOST: ${HOST}
+      DB_USER: ${USER}
+      DB_PASS: ${PASS}
       DB: ${DB}
       CHARSET: "charset=utf8"
     ports:
